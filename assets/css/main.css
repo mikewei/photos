@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+nav, main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* 在 logo 和主题列表之间添加间距 */
+}
+
+.logo {
+    display: block;
+    transition: transform 0.3s ease;
+    margin-right: 15px; /* 在 logo 和副标题之间添加一些间距 */
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    color: #aaa; /* 更浅的灰色 */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-end; /* 将副标题对齐到底部 */
+    padding-bottom: 5px; /* 添加一些底部内边距，使文字稍微上移 */
+}
+
+#topics {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.topic {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.topic:hover, .topic:visited, .topic:active {
+    text-decoration: none;
+}
+
+.topic.active {
+    font-weight: bold;
+}
+
+main {
+    max-width: 1200px;
+    margin: 120px auto 0; /* 增加顶部 margin 以适应两行的 header */
+    padding: 0 20px;
+}
+
+#photos {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 20px 0;
+}
+
+.photo {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.05);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* 删除或注释掉以下代码 */
+/*
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+}
+*/
+
+@media (max-width: 1024px) {
+    #photos {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 600px) {
+    #photos {
+        column-count: 1;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #topics {
+        margin-top: 10px;
+    }
+    .topic {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 1240px) {
+    nav, main {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subtitle {
+        margin-top: 5px;
+    }
+
+    #topics {
+        flex-wrap: wrap;
+    }
+
+    .topic {
+        margin-bottom: 10px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #aaa;
+    margin: 0;
+}
+
+.photo-info {
+    font-size: 14px;
+    text-align: center;
+}
