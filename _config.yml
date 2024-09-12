@@ -1,11 +1,11 @@
-title: 摄影作品展示
-baseurl: ""
-url: ""
+title: 山河
+baseurl: "/photo"
+url: "https://mikewei.github.io"
 
 # Build settings
 markdown: kramdown
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
 
 exclude:
   - Gemfile
@@ -18,4 +18,4 @@ exclude:
   - album/
 
 # 添加以下行
-include: ["_data"]
+include: []

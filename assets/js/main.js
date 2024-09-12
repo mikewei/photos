@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/assets/data/album.json')
+    fetch('assets/data/album.json')
         .then(response => response.json())
         .then(data => {
             console.log('Album data loaded:', data); // 添加这行
@@ -103,7 +103,7 @@ function createPhotoElement(photo) {
         img.dataset.src = `${photo.cloudUrl}?imageView2/2/w/500`; // 使用 data-src 而不是 src
     } else {
         console.error('Photo missing cloudUrl:', photo);
-        img.dataset.src = '/assets/image/placeholder.jpg'; // 使用占位图
+        img.dataset.src = 'assets/image/placeholder.jpg'; // 使用相对路径
     }
     img.alt = photo.description || photo.FileName || '照片';
     img.loading = 'lazy';
