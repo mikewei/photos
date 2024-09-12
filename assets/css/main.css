@@ -130,13 +130,14 @@ main {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.9);
+    padding-top: 20px;
 }
 
 .lightbox-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 95%;
+    max-height: 88%;
 }
 
 #lightbox-caption {
