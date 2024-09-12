@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             console.log('Album data loaded:', data); // 添加这行
-            displayTopics(data);
+            sortTopics(data);
+            const topics = indexTopics(data);
+            displayTopics(data, topics);
             displayAllPhotos(data);
         })
         .catch(error => {
@@ -11,7 +13,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 });
 
-function displayTopics(data) {
+function sortTopics(data) {
+    // 按periodName与topicName排序(降序)
+    data.sort((a, b) => {
+        // 首先按periodName排序(降序)
+        const periodComparison = b.topicMetadata.periodName.localeCompare(a.topicMetadata.periodName);
+        if (periodComparison !== 0) {
+            return periodComparison;
+        }
+        // 如果periodName相同，则按topicName排序
+        return a.topicMetadata.topicName.localeCompare(b.topicMetadata.topicName);
+    });
+}
+
+// return an array of topics, each topic is an array of albums
+function indexTopics(data) {
+    const topics = new Array();
+    const dedupMap = new Map();
+    data.forEach(album => {
+        const topicName = album.topicMetadata.topicName;
+        if (!dedupMap.has(topicName)) {
+            const count = topics.push([album]);
+            dedupMap.set(topicName, count - 1);
+        } else {
+            const index = dedupMap.get(topicName);
+            topics[index].push(album);
+        }
+    });
+    return topics;
+}
+
+// display topics on the page
+function displayTopics(data, topics) {
     const topicsContainer = document.getElementById('topics');
     // 添加"全部"选项
     const allTopic = document.createElement('a');
@@ -25,14 +58,16 @@ function displayTopics(data) {
     });
     topicsContainer.appendChild(allTopic);
 
-    data.forEach(album => {
+    topics.forEach(topic => {
+        const album = topic[0];
+        const topicName = album.topicMetadata.topicName;
         const topicLink = document.createElement('a');
         topicLink.className = 'topic';
-        topicLink.textContent = album.topicMetadata.topicName;
+        topicLink.textContent = topicName;
         topicLink.href = '#';
         topicLink.addEventListener('click', (e) => {
             e.preventDefault();
-            displayPhotos(album.photoMetadata);
+            displayAllPhotos(topic);
             setActiveTopicLink(topicLink);
         });
         topicsContainer.appendChild(topicLink);
@@ -44,12 +79,7 @@ function displayAllPhotos(data) {
     photosContainer.innerHTML = '';
 
     const allPhotos = data.flatMap(album => album.photoMetadata);
-    allPhotos.forEach(photo => {
-        const photoElement = createPhotoElement(photo);
-        photosContainer.appendChild(photoElement);
-    });
-
-    lazyLoadImages();
+    displayPhotos(allPhotos);
 }
 
 function displayPhotos(photos) {
