@@ -234,4 +234,8 @@ footer p {
 .photo-info {
     font-size: 14px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

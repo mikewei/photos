@@ -164,13 +164,17 @@ function openLightbox(photo) {
     lightboxCaption.innerHTML = `
         <p class="photo-description">${photo.description || ''}</p>
         <div class="photo-info">
-            📍${photo.location || '未知'}
-            ${photo.DateTimeOriginal || '未知'}
-            📸 ${formatModel(photo.Model)}
-            ${formatFocalLength(photo.FocalLengthIn35mmFilm)}
-            f/${photo.FNumber || '未知'}
-            ${parseShutterSpeed(photo.ShutterSpeedValue)}
-            ISO${photo.ISOSpeedRatings || '未知'}
+            <div>
+                📍${photo.location || '未知'}
+                ${photo.DateTimeOriginal || '未知'}
+            </div>
+            <div>
+                📸 ${formatModel(photo.Model)}
+                ${formatFocalLength(photo.FocalLengthIn35mmFilm)}
+                f/${photo.FNumber || '未知'}
+                ${parseShutterSpeed(photo.ShutterSpeedValue)}
+                ISO${photo.ISOSpeedRatings || '未知'}
+            </div>
         </div>
     `;
 
