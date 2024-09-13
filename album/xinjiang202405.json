@@ -421,22 +421,6 @@
       "ImageHeight": 2268
     },
     {
-      "FileName": "dji_fly_20240523_193758_0214_1716465528359_pano.jpg",
-      "FileSize": 24331930,
-      "FileType": "image/jpeg",
-      "DateTimeOriginal": "2024:05:23 19:36:38",
-      "Model": "FC8282",
-      "FocalLengthIn35mmFilm": 24,
-      "FNumber": 1.7,
-      "ShutterSpeedValue": 10.287712,
-      "ISOSpeedRatings": 100,
-      "cloudUrl": "https://p.healthylife.ren/新疆/dji_fly_20240523_193758_0214_1716465528359_pano.jpg",
-      "location": "伊犁什库琼台",
-      "description": "",
-      "ImageWidth": 12000,
-      "ImageHeight": 6000
-    },
-    {
       "FileName": "dji_fly_20240523_194610_0222_1716465571949_photo.jpg",
       "FileSize": 5128169,
       "FileType": "image/jpeg",
@@ -531,22 +515,6 @@
       "description": "",
       "ImageWidth": 3779,
       "ImageHeight": 2126
-    },
-    {
-      "FileName": "dji_fly_20240524_134056_0281_1716572246347_pano.jpg",
-      "FileSize": 30541643,
-      "FileType": "image/jpeg",
-      "DateTimeOriginal": "2024:05:24 13:39:35",
-      "Model": "FC8282",
-      "FocalLengthIn35mmFilm": 24,
-      "FNumber": 1.7,
-      "ShutterSpeedValue": 10.550747,
-      "ISOSpeedRatings": 110,
-      "cloudUrl": "https://p.healthylife.ren/新疆/dji_fly_20240524_134056_0281_1716572246347_pano.jpg",
-      "location": "伊犁什库琼台",
-      "description": "",
-      "ImageWidth": 12000,
-      "ImageHeight": 6000
     },
     {
       "FileName": "dji_fly_20240524_134140_0282_1716572251966_photo.jpg",
