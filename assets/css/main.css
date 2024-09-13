@@ -91,7 +91,7 @@ nav {
 
 main {
     max-width: 1200px;
-    margin: 120px auto 0; /* 增加顶部 margin 以适应两行的 header */
+    margin: 140px auto 0; /* 增加顶部 margin 以适应两行的 header */
     padding: 0 20px;
 }
 
