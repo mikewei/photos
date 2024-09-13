@@ -154,12 +154,19 @@ function openLightbox(photo) {
         return focalLength ? focalLength + 'mm' : '未知';
     }
 
+    function formatModel(model) {
+        if (model.startsWith('FC8')) {
+            return 'AIR3';
+        }
+        return model ? model : '未知';
+    }
+
     lightboxCaption.innerHTML = `
         <p class="photo-description">${photo.description || ''}</p>
         <div class="photo-info">
             📍${photo.location || '未知'}
             ${photo.DateTimeOriginal || '未知'}
-            📸 ${photo.Model || '未知'}
+            📸 ${formatModel(photo.Model)}
             ${formatFocalLength(photo.FocalLengthIn35mmFilm)}
             f/${photo.FNumber || '未知'}
             ${parseShutterSpeed(photo.ShutterSpeedValue)}
