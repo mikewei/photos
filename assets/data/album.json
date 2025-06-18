@@ -2225,6 +2225,62 @@
   },
   {
     "topicMetadata": {
+      "topicName": "上海",
+      "periodName": "202506"
+    },
+    "photoMetadata": [
+      {
+        "FileName": "DSCF4982.JPG",
+        "FileSize": 3364545,
+        "FileType": "image/jpeg",
+        "DateTimeOriginal": "2025:06:13 20:16:39",
+        "Model": "X-T5",
+        "FocalLengthIn35mmFilm": 20,
+        "FNumber": 1.4,
+        "ShutterSpeedValue": 4.643856,
+        "ISOSpeedRatings": 250,
+        "cloudUrl": "https://p.healthylife.ren/上海/DSCF4982.JPG",
+        "location": "上海外滩",
+        "description": "外滩游轮观景",
+        "ImageWidth": 3668,
+        "ImageHeight": 2063
+      },
+      {
+        "FileName": "IMG_1196_jpg.JPG",
+        "FileSize": 3812166,
+        "FileType": "image/jpeg",
+        "DateTimeOriginal": "2025:06:13 20:25:43",
+        "Model": "iPhone 14 Pro Max",
+        "FocalLengthIn35mmFilm": 48,
+        "FNumber": 1.8,
+        "ShutterSpeedValue": 4.643856,
+        "ISOSpeedRatings": 400,
+        "cloudUrl": "https://p.healthylife.ren/上海/IMG_1196_jpg.JPG",
+        "location": "上海外滩",
+        "description": "外滩游轮观景",
+        "ImageWidth": 4032,
+        "ImageHeight": 2268
+      },
+      {
+        "FileName": "IMG_1202_jpg.JPG",
+        "FileSize": 3175978,
+        "FileType": "image/jpeg",
+        "DateTimeOriginal": "2025:06:13 20:27:30",
+        "Model": "iPhone 14 Pro Max",
+        "FocalLengthIn35mmFilm": 48,
+        "FNumber": 1.8,
+        "ShutterSpeedValue": 4.906891,
+        "ISOSpeedRatings": 640,
+        "cloudUrl": "https://p.healthylife.ren/上海/IMG_1202_jpg.JPG",
+        "location": "上海外滩",
+        "description": "外滩游轮观景",
+        "ImageWidth": 3944,
+        "ImageHeight": 2218
+      }
+    ]
+  },
+  {
+    "topicMetadata": {
       "topicName": "新疆",
       "periodName": "202405"
     },
